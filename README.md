@@ -47,9 +47,20 @@ Ce projet automatise l'installation de Docker sur ta machine Linux (même si ell
    make run
    ```
 
+
 5. Tester l'installation :
    ```bash
    make test
+   ```
+
+6. Vérifier si l'utilisateur courant est dans le groupe docker :
+   ```bash
+   make check-docker-group
+   ```
+
+7. Ajouter manuellement l'utilisateur courant au groupe docker (si besoin) :
+   ```bash
+   make add-user-to-docker
    ```
 
 ## Désinstallation
