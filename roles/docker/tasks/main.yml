@@ -44,13 +44,6 @@
     state: started
     enabled: yes
 
-- name: Ajouter l'utilisateur courant au groupe docker
-  user:
-    name: "{{ ansible_user_id }}"
-    groups: docker
-    append: yes
-    state: present
-
 - name: Vérifier que Docker fonctionne
   command: docker --version
   register: docker_version
